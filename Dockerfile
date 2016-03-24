@@ -21,7 +21,7 @@ RUN mkdir -p /app/.profile.d \
     >  /app/.profile.d/docker-heroku-phoenix.sh
 
 # Install Erlang/OTP
-ENV ERLANG_ENGINE 18.1.2
+ENV ERLANG_ENGINE 18.3.0
 ENV ERL_TOP /tmp/erlang
 RUN mkdir -p /tmp/erlang \
     && cd /tmp/erlang \
@@ -35,7 +35,7 @@ RUN mkdir -p /tmp/erlang \
     && rm -rf /tmp/erlang
 
 # Install Elixir
-ENV ELIXIR_ENGINE 1.1.1
+ENV ELIXIR_ENGINE 1.2.3
 RUN mkdir -p /tmp/elixir \
     && cd /tmp/elixir \
     && curl -s https://codeload.github.com/elixir-lang/elixir/tar.gz/v$ELIXIR_ENGINE \
@@ -49,7 +49,7 @@ RUN mkdir -p /tmp/elixir \
 RUN mix local.hex --force && mix local.rebar --force
 
 # Install Node.js (comes with NPM)
-ENV NODE_ENGINE 4.2.1
+ENV NODE_ENGINE 4.4.1
 RUN mkdir -p /tmp/node \
     && cd /tmp/node \
     && curl -s https://codeload.github.com/nodejs/node/tar.gz/v$NODE_ENGINE \
