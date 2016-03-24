@@ -21,7 +21,7 @@ RUN mkdir -p /app/.profile.d \
     >  /app/.profile.d/docker-heroku-phoenix.sh
 
 # Install Erlang/OTP
-ENV ERLANG_ENGINE 18.3.0
+ENV ERLANG_ENGINE 18.3
 ENV ERL_TOP /tmp/erlang
 RUN mkdir -p /tmp/erlang \
     && cd /tmp/erlang \
